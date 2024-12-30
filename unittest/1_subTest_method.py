@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 
 from code import get_square
@@ -17,3 +18,6 @@ class TestExample(TestCase):
             with self.subTest():
                 result = get_square(value)
                 self.assertEqual(result, expected_result)
+
+
+unittest.main()
