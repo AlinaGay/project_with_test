@@ -1,7 +1,6 @@
 # test_calculator.py
 import unittest
 
-# Импортируем класс MadCalculator.
 from calculator import MadCalculator
 
 
