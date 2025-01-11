@@ -16,11 +16,8 @@ class TestCalc(unittest.TestCase):
 
     def test_sum_string_negative_value(self):
         """Тестирование исключения с отрицательным числом."""
-        # Создаём другой экземпляр класса MadCalculator.
         calc = MadCalculator()
-        # Проверяем, что тест выдаст ошибку ValueError.
         with self.assertRaises(ValueError):
-            # Вызываем метод.
             calc.sum_string(1, -100500)
 
     def test_sum_args(self):
