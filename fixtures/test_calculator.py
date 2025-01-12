@@ -22,9 +22,7 @@ class TestCalc(unittest.TestCase):
 
     def test_sum_args(self):
         """Тестирование функции суммирования аргументов."""
-        # Создаём ещё один экземпляр класса MadCalculator.
         calc = MadCalculator()
-        # Вызываем метод.
         act = calc.sum_args(3, -3, 5)
         self.assertEqual(act, 5, 'Метод sum_args работает неправильно.')
 
