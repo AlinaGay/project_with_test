@@ -9,7 +9,7 @@ class TestCalc(unittest.TestCase):
 
     def test_sum_string(self):
         """Тестирование функции sum_string с конкатенацией строк."""
-        
+
         calc = MadCalculator()
         act = calc.sum_string(1, 100500)
         self.assertEqual(act, 1100500, 'Метод sum_string работает неправильно.')
