@@ -12,7 +12,8 @@ class TestCalc(unittest.TestCase):
 
         calc = MadCalculator()
         act = calc.sum_string(1, 100500)
-        self.assertEqual(act, 1100500, 'Метод sum_string работает неправильно.')
+        self.assertEqual(act, 1100500, 'Метод sum_string '
+                         'работает неправильно.')
 
     def test_sum_string_negative_value(self):
         """Тестирование исключения с отрицательным числом."""
