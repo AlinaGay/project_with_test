@@ -7,24 +7,27 @@ from calculator import MadCalculator
 class TestCalc(unittest.TestCase):
     """Тестируем MadCalculator."""
 
+    def setUp(self):
+        """Подготовка прогона теста. Вызывается перед каждым тестом."""
+        # Arrange - подготавливаем данные для каждого теста.
+        self.calc = MadCalculator()
+
     def test_sum_string(self):
         """Тестирование функции sum_string с конкатенацией строк."""
-
-        calc = MadCalculator()
-        act = calc.sum_string(1, 100500)
-        self.assertEqual(act, 1100500, 'Метод sum_string '
-                         'работает неправильно.')
-
+        # Убираем создание calc, меняем calc на self.calc.
+        act = self.calc.sum_string(1, 100500)
+        self.assertEqual(act, 1100500, 'Метод sum_string работает неправильно.')
+    
     def test_sum_string_negative_value(self):
         """Тестирование исключения с отрицательным числом."""
-        calc = MadCalculator()
         with self.assertRaises(ValueError):
-            calc.sum_string(1, -100500)
+            # Убираем создание calc, меняем calc на self.calc.
+            self.calc.sum_string(1, -100500)
 
     def test_sum_args(self):
         """Тестирование функции суммирования аргументов."""
-        calc = MadCalculator()
-        act = calc.sum_args(3, -3, 5)
+        # Убираем создание calc, меняем calc на self.calc.
+        act = self.calc.sum_args(3, -3, 5)
         self.assertEqual(act, 5, 'Метод sum_args работает неправильно.')
 
 
